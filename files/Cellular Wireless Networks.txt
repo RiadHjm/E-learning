@@ -1,0 +1,115 @@
+Cellular Network Organization : 
+-Use multiple low-power transmitters (100 W or less)
+-Areas divided into cells
+    Each served by its own antenna
+    Served by base station consisting of transmitter, receiver, and control unit
+    Band of frequencies allocated
+    Cells set up such that antennas of all neighbors are equidistant (hexagonal pattern)
+
+Frequency Reuse : 
+-Adjacent cells assigned different frequencies to avoid interference or crosstalk
+-Objective is to reuse frequency in nearby cells
+    10 to 50 frequencies assigned to each cell,
+    Transmission power controlled to limit power at that frequency escaping to adjacent cells,
+    The issue is to determine how many cells must intervene between two cells using the same frequency.
+
+Approaches to Cope with Increasing Capacity : 
+-Adding new channels
+-Frequency borrowing – frequencies are taken from adjacent cells by congested cells
+-Cell splitting – cells in areas of high usage can be split into smaller cells
+-Cell sectoring – cells are divided into a number of wedge-shaped sectors, each with their own set of channels
+-Microcells – antennas move to buildings, hills, and lamp posts
+
+Cellular Systems Terms : 
+-Base Station (BS) – includes an antenna, a controller, and a number of receivers
+-Mobile telecommunications switching office (MTSO) – connects calls between mobile units
+-Two types of channels available between mobile unit and BS
+    Control channels “CCH” – used to exchange information having to do with setting up and maintaining calls
+    Traffic channels  “TCH”– carry voice or data connection between users
+
+Steps in an MTSO Controlled Call between Mobile Users :
+-Mobile unit initialization
+-Mobile-originated call
+-Paging
+-Call accepted
+-Ongoing call
+-Handoff
+
+Additional Functions in an MTSO Controlled Call : 
+-Call blocking (GOS <= 2%)
+-Call termination
+-Call drop
+-Calls to/from fixed and remote mobile subscriber
+
+Mobile Radio Propagation Effects : 
+-Signal strength
+    Must be strong enough between base station and mobile unit to maintain signal quality at the receiver
+    Must not be so strong as to create too much co-channel interference with channels in another cell using the same frequency band
+-Fading
+    Signal propagation effects may disrupt the signal and cause errors
+
+Handoff Strategies Used to Determine Instant of Handoff : 
+-Relative signal strength
+-Relative signal strength with threshold
+-Relative signal strength with hysteresis
+-Relative signal strength with hysteresis and threshold
+-Prediction techniques
+
+Traffic Engineering : 
+-Ideally, available channels would equal number of subscribers active at one time
+-In practice, not feasible to have capacity handle all possible load
+-For N simultaneous user capacity and L subscribers
+    L < N – nonblocking system
+    L > N – blocking system
+
+Blocking System Performance Questions : 
+-Probability that call request is blocked?
+-What capacity is needed to achieve a certain upper bound on probability of blocking?
+-What is the average delay?
+-What capacity is needed to achieve a certain average delay?
+
+First-Generation Analog : 
+-Advanced Mobile Phone Service (AMPS)
+    In North America, two 25-MHz bands allocated to AMPS
+        One for transmission from base to mobile unit
+        One for transmission from mobile unit to base
+-Each band split in two to encourage competition
+-Frequency reuse exploited
+
+AMPS Operation : 
+-Subscriber initiates call by keying in phone number and presses send key
+-MTSO verifies number and authorizes user
+-MTSO issues message to user’s cell phone indicating send and receive traffic channels
+-MTSO sends ringing signal to called party
+-Party answers; MTSO establishes circuit and initiates billing information
+-Either party hangs up; MTSO releases circuit, frees channels, completes billing
+
+Differences Between First and Second Generation Systems : 
+-Digital traffic channels – first-generation systems are almost purely analog; second-generation systems are digital
+-Encryption – all second generation systems provide encryption to prevent eavesdropping
+-Error detection and correction – second-generation digital traffic allows for detection and correction, giving clear voice reception
+-Channel access – second-generation systems allow channels to be dynamically shared by a number of users
+
+Mobile Station : 
+-Mobile station communicates across Um interface (air interface) with base station transceiver in same cell as mobile unit
+-Mobile equipment (ME) – physical terminal, such as a telephone or PCS
+    ME includes radio transceiver, digital signal processors and subscriber identity module (SIM)
+-GSM subscriber units are generic until SIM is inserted
+    SIMs roam, not necessarily the subscriber devices
+
+ITU’s View of Third-Generation Capabilities : 
+-Voice quality comparable to the public switched telephone network
+-144 kbps data rate available to users in high-speed motor vehicles over large areas
+-384 kbps available to pedestrians standing or moving slowly over small areas
+-Support for 2.048 Mbps for office use
+-Symmetrical / asymmetrical data transmission rates
+-Support for both packet switched and circuit switched data services
+-An adaptive interface to the Internet to reflect efficiently the common asymmetry between inbound and outbound traffic
+-More efficient use of the available spectrum in general
+-Support for a wide variety of mobile equipment
+-Flexibility to allow the introduction of new services and technologies
+
+
+
+
+

@@ -1,0 +1,41 @@
+•ACCEPT :-Allows the packet pass through. 
+•REJECT :-Discards the packet and sends a notification back. 
+•DROP :-Discards the packet without sending notification back. 
+•LOG :-Sends packet information to rsyslogd daemon for logging. Chain can also inspect the packet based on its state. Following are some common states:-
+•NEW :-Packet is not the part of any exiting communication. 
+•ESTABLISHED :-Packet is the part of an existing communication. 
+•RELATED:-Packet is the part of other existing communication. 
+•INVALID :-Packet does not match with any states. 
+
+Start an http server in the server machine : 
+# create a new directory  
+user@server$mkdir~/Desktop/webserver_data/
+user@server$cd~/Desktop/webserver_data/
+# create htmlfile tobe served
+user@server$ echo " index pageof the server " > index.html
+# start the http server
+user@server$ python −m SimpleHTTPServer
+
+#In the client machine install nmap
+user@client$ sudoapt−getupdate
+user@client$ sudoapt−getinstall –ynmap
+#In the Server machine install SSH
+user@server$ sudoapt−getupdate
+user@server$sudoapt-get install -y openssh-server
+
+Listing the open ports in the server 
+1.From the client side:
+ user@client$ nmap <the ip of your server >
+2.From the server side 
+user@server$ ss−tunlp4
+
+•Allow traffic on loopback and established connections
+iptables -A INPUT -i lo -j ACCEPT 
+iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT 
+•Allow ping requests
+iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT 
+•Allow traffic to the webserver
+iptables -A INPUT -p tcp --dport 8000 -j ACCEPT 
+6•Allow traffic to the SSH server let 192.168.1.99 be the ip of the client we want to allow to access ssh server 
+iptables -A INPUT -p tcp --dport 22 -s 192.168.1.99 -j ACCEPT
+

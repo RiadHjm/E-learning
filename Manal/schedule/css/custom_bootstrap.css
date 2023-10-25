@@ -1,0 +1,40 @@
+a {
+  text-decoration: none;
+}
+.py-5 {
+    padding-top: 1rem!important;
+    padding-bottom: 3rem!important;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: inherit;
+    margin-bottom: 0;
+    list-style: none;
+}
+#page-container.row {
+  margin-bottom: 0px;
+  padding-top: 0px;
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100vw;
+    height: fit-content;
+    background-color: #000;
+}
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+    box-shadow: 12px 12px 30px 1px black;
+}

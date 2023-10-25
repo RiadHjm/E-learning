@@ -1,0 +1,812 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;300;400;500;600&display=swap');
+
+:root
+{
+    --blue: #3A82EE;
+    --light_blue: #04BEFE;
+    --white: #FFF;
+    --dark: #313154;
+    --light_color: #666;
+    --light_background: #F5F5F5;
+    --border: .1rem solid rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+
+    --primary_color: #0652DD;
+    --border_color: #DCE0E5;
+    --light: #F5F6FA;
+    --grey_color: #8B8E97;
+}
+
+*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+}
+
+*, ::before, ::after
+{
+    box-sizing: border-box;
+}
+
+html
+{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+section
+{
+    padding: 3rem 9%;
+}
+
+.header 
+{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9%;
+    background: var(--blue);
+}
+
+.header .logo
+{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--white);
+}
+
+.hearer .logo i
+{
+    color: var(--white);
+}
+
+.navbar ul.scrollable 
+{
+    list-style: none;
+}
+
+.navbar ul.scrollable li.sc 
+{
+    position: relative;
+    float: left;
+}
+.navbar ul.scrollable li.sc:hover ul.scroll
+{
+    display: block;
+}
+
+.navbar ul.scrollable li.sc a.lnk
+{
+    padding: 2rem;
+    display: block;
+    font-size: 1.7rem;
+    color: var(--white);
+}
+
+.navbar ul.scrollable li.sc a.lnk:hover 
+{
+    background: var(--white);
+    color: var(--dark);
+}
+
+.navbar ul.scroll
+{
+    position: absolute;
+    left: 0;
+    width: 20rem;
+    background: var(--blue);
+    display: none;
+}
+
+.navbar ul.scroll li.src
+{
+    width: 100%;
+}
+
+#menuBtn 
+{
+    cursor: pointer;
+    color: var(--white);
+    font-size: 2.5rem;
+    display: none;
+}
+
+
+main .formBox .top .container ul li a.ind
+{
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 20px;
+}
+
+img 
+{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+main .formBox .top .container ul
+{
+    list-style: none;
+}
+
+h1, h2, h3, h4 
+{
+    font-weight: 500;
+    line-height: normal;
+}
+
+h1
+{
+    font-size: 2em;
+}
+
+h2
+{
+    font-size: 1.75em;
+}
+
+h3
+{
+    font-size: 1em;
+}
+
+h4
+{
+    font-size: 1em;
+}
+
+.container
+{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.logo a 
+{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 0;
+    display: block;
+    width: fit-content;
+    text-transform: lowercase;
+    font-family: 'Chivo Mono';
+    color: var(--dark);
+}
+
+.top 
+{
+    margin-bottom: 50px;
+    background-color: var(--light);
+}
+
+.top ul 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.top ul li
+{
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    line-height: 1;
+    gap: 7px;
+}
+
+.top ul li.active 
+{
+    color: black;
+}
+
+.top ul li.active ~ li 
+{
+    color: var(--light_color);
+}
+
+.top ul li i 
+{
+    font-size: 18px;
+}
+
+.top ul li.active i 
+{
+    color: var(--blue);
+}
+
+.wrapper .faculty ul 
+{
+    list-style-type: none;
+}
+
+form .form-child 
+{
+    display: none;
+
+}
+
+form .form-child.active 
+{
+    display: block;
+}
+
+form h2 
+{
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+form .field .wrapper 
+{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+form .faculty 
+{
+    position: relative;
+    padding-left: 60px;
+    font-size: 13px;
+}
+
+form .faculty h3 
+{
+    margin: 15px 0;
+}
+
+form .faculty .icon 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--light_background);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+form .faculty .icon::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(15px);
+}
+
+form .faculty:nth-child(1) .icon::before
+{
+    background-color: var(--blue);
+}
+
+form .faculty:nth-child(2) .icon::before
+{
+    background-color: var(--primary_color);
+}
+
+form .faculty:nth-child(3) .icon::before
+{
+    background-color: var(--primary_color);
+}
+
+form .faculty:nth-child(4) .icon::before
+{
+    background-color: var(--blue);
+}
+
+form .faculty ul 
+{
+    line-height: 2;
+}
+
+form .faculty ul li 
+{
+    position: relative;
+}
+
+form .field .wrapper input 
+{
+    width: 0;
+    min-width: 0;
+    height: 0;
+}
+
+form .field .wrapper label 
+{
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+form .field .wrapper label::before 
+{
+    content: '';
+    position: absolute;
+    display: block;
+    top: calc((26px / 2) - 8px);
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--light);
+    border: 1px solid var(--primary_color);
+}
+
+form .field .wrapper input:checked ~ label::before 
+{
+    background-color: #B9C9EE;
+    border-color: var(--primary_color);
+    box-shadow: rgb(0 0 0 / 35%) 0 3px 6px;
+}
+
+form nav a 
+{
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 12px;
+    display: inline-flex;
+    padding: 4px 20px;
+    margin-left: 10px;
+    border: 1px solid transparent;
+}
+
+form .sub 
+{
+    width: 15px;
+    height: 30px;
+    color: var(--white);
+    background-color: var(--blue);
+    font-weight: 500;
+    font-size: 12px;
+    display: flex;
+    padding: 4px 10px;
+    margin-left: 30px;
+    border: 1px solid transparent;
+    justify-content: center;
+    cursor: pointer;
+}
+
+form .sub:hover 
+{
+    border-color: var(--dark);
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+form nav 
+{
+    text-align: right;
+    padding: 30px 0;
+}
+
+form nav .prev 
+{
+    border-color: var(--dark);
+}
+
+form nav .next, form nav .submit 
+{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+form nav .submit 
+{
+    pointer-events: none
+}
+
+form nav .next:hover, form nav .submit:hover
+{
+    border-color: var(--dark);
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+form .split 
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.highlight .head 
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.highlight .thumbnail
+{
+    width: 150px;
+    height: 150px;
+    margin: 0 20px 20px;
+    border-radius: 50%;
+    background-color: var(--border_color);
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.highlight .thumbnail img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.highlight .head span 
+{
+    color: var(--light_color);
+    font-size: 12px;
+}
+
+.highlight .head .split h4 
+{
+    font-size: 20px;
+}
+
+.highlight .head .devider
+{
+    height: 40px;
+    width: 1px;
+    background-color: var(--border_color);
+    transform: rotate(25deg);
+}
+
+.highlight .wrapper 
+{
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid var(--border_color);
+}
+
+.highlight .wrapper h4 
+{
+    color: var(--grey_color);
+    font-size: 12px;
+    margin-bottom: 50px;
+}
+
+.highlight .field-selected 
+{
+    display: flex;
+    flex-wrap: wrap;   
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.highlight .faculty .icon 
+{
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+}
+
+.highlight .faculty h3 
+{
+    margin: 0;
+}
+
+.form-child.active ~ .wrapper > .highlight 
+{
+    display: none;
+}
+
+.field.active ~ nav :where(.prev, .submit),
+.field ~ .wrapper .profile.active ~ nav .submit 
+{
+    display: none;
+}
+
+
+form .profile .heading, form .story .heading 
+{
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+form .story .heading h3
+{
+    font-size: 20px;
+}
+
+form .profile .heading .icon, form .story .heading .icon
+{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background-color: var(--blue);
+    border-radius: 50%;
+}
+
+form .profile .row:not(:last-child) 
+{
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border_color);
+}
+
+form .personal .upload p input
+{
+    height: auto;
+    cursor: pointer;
+    color: var(--grey_color);
+}
+
+form .personal .upload p input::-webkit-file-upload-button
+{
+    color: var(--white);
+    padding: 5px 10px;
+    background-color: var(--dark);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+form .personal .upload p input:hover::-webkit-file-upload-button
+{
+    background-color: var(--blue);
+}
+
+input, select, textarea
+{
+    font: inherit;
+    padding: 12px 20px;
+    height: 42px;
+    background-color: transparent;
+    border: 1px solid var(--border_color);
+    outline: 0;
+    font-size: 13px;
+    min-width: 212px;
+    width: 100%;
+    transition: border .3s;
+    text-transform: none;
+}
+:where(input, select, textarea):focus
+{
+    border-color: var(--blue);
+}
+
+input ~ input 
+{
+    margin-top: 20px;
+}
+
+input::placeholder, select
+{
+    color: var(--grey_color);
+}
+
+form .row > :where(.split, p)
+{
+    margin-bottom: 20px;
+}
+
+form p 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+form p label 
+{
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+select
+{
+    appearance: none;
+}
+
+form .custom-select 
+{
+    position: relative;
+    line-height: normal;
+}
+
+form .custom-select i 
+{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+form .birth input 
+{
+    min-width: 80px;
+}
+
+input::-webkit-outer-spin-button, 
+input::-webkit-inner-spin-button
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]
+{
+    -moz-appearance: textfield;
+}
+
+.profile .heading h3 
+{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+textarea 
+{
+    height: auto;
+}
+
+
+
+
+.footer
+{
+    background: var(--light_background);
+}
+
+.footer .boxContainer
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .boxContainer .box h3
+{
+    font-size: 2.2rem;
+    padding: 1rem 0;
+    color: var(--dark);
+}
+
+.footer .boxContainer .box a 
+{
+    display: block;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    color: var(--light_color);
+}
+
+.footer .boxContainer .box a:hover 
+{
+    color: var(--blue);
+}
+
+.footer .boxContainer .box a:hover i
+{
+    padding-right: 2rem;
+}
+
+.footer .boxContainer .box a i 
+{
+    padding-right: 0.5rem;
+}
+
+.footer .credit 
+{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    color: var(--light_color);
+    border-top: var(--border);
+}
+
+.footer .credit span 
+{
+    color: var(--blue);
+}
+
+
+
+
+
+@media(max-width: 1200px)
+{
+    html
+    {
+        font-size: 55%;
+    }
+    section
+    {
+        padding: 3rem 2rem;
+    }
+}
+@media(max-width: 768px)
+{
+    #menuBtn 
+    {
+        display: inline-block;
+    }
+    .header
+    {
+        padding: 2rem;
+    }
+    .navbar
+    {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: var(--blue);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    } 
+    .navbar.active
+    {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    ul.scrollable li.sc 
+    {
+        width: 100%;
+    }
+    ul.scroll 
+    {
+        width: 100%;
+        position: relative;
+    }
+}
+@media(max-width: 450px)
+{
+    html
+    {
+        font-size: 50%;
+    }
+}
+
+@media(min-width: 768px)
+{
+    .highlight
+    {
+        padding-top: 30px;
+        margin-top: 100px;
+        border-top: 1px solid var(--border_color);
+    }
+    form > .wrapper 
+    {
+        display: grid;
+        grid-gap: 50px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    form .personal > *:not(.heading)
+    {
+        padding-left: 50px;
+    }
+}

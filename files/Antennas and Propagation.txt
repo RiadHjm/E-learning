@@ -1,0 +1,77 @@
+Antennas and Propagation
+
+An antenna is an active device conductor or system of conductors :
+◼ Transmission - radiates electromagnetic energy into space
+◼ Reception - collects electromagnetic energy from space
+◼ In two-way communication, the same antenna can be used for transmission and reception
+
+Radiation Patterns : 
+◼ Radiation pattern
+	◼ Graphical representation of radiation properties of an
+	antenna
+	◼ Depicted as two-dimensional cross section
+◼ Beam width (or half-power beam width)
+	◼ Measure of directivity of antenna
+◼ Reception pattern
+	◼ Receiving antenna’s equivalent to radiation pattern
+
+Types of Antennas :
+◼ Isotropic antenna (idealized)
+	◼ Radiates power equally in all directions
+◼ Dipole antennas
+	◼ Half-wave dipole antenna (or Hertz antenna)
+	◼ Quarter-wave vertical antenna (or Marconi
+	antenna)
+◼ Parabolic Reflective Antenna
+
+Antenna Gain : 
+◼ Antenna gain
+	◼ Power output, in a particular direction,
+	compared to that produced in any direction by a
+	perfect omnidirectional antenna (isotropic
+	antenna)
+◼ Effective area
+	◼ Related to physical size and shape of antenna
+
+Categories of Noise : 
+◼ Thermal Noise
+◼ Intermodulation noise
+◼ Crosstalk
+◼ Impulse Noise
+
+Thermal Noise : 
+◼ Thermal noise due to agitation of electrons
+◼ Present in all electronic devices and transmission media
+◼ Cannot be eliminated
+◼ Function of temperature
+◼ Particularly significant for satellite communication
+
+Other Impairments : 
+◼ Atmospheric absorption – water vapor and oxygen contribute to attenuation
+◼ Multipath – obstacles reflect signals so that multiple copies with varying delays are received
+◼ Refraction – bending of radio waves as they propagate through the atmosphere
+
+Multipath Propagation : 
+◼ Reflection - occurs when signal encounters a surface that is large relative to the wavelength of the signal
+◼ Diffraction - occurs at the edge of an impenetrable body that is large compared to wavelength of radio wave
+◼ Scattering – occurs when incoming signal hits an object whose size in the order of the wavelength of the signal or less
+
+The Effects of Multipath Propagation : 
+◼ Multiple copies of a signal may arrive at different phases
+◼ If phases add destructively, the signal level relative to noise declines, making detection more difficult
+◼ Intersymbol interference (ISI)
+◼ One or more delayed copies of a pulse may arrive at the same time as the primary pulse for a subsequent bit
+
+Types of Fading : 
+◼ Fast fading
+◼ Slow fading
+◼ Flat fading
+◼ Selective fading
+◼ Rayleigh fading
+◼ Rician fading
+
+Diversity Techniques : 
+◼ Diversity is based on the fact that individual channels experience independent fading events
+◼ Space diversity – techniques involving physical transmission path
+◼ Frequency diversity – techniques where the signal is spread out over a larger frequency bandwidth or carried on multiple frequency carriers
+◼ Time diversity – techniques aimed at spreading the data out over time

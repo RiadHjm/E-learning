@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input 
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container 
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FFF;
+    overflow: hidden;
+}
+
+.container::before
+{
+    content: '';
+    position: absolute;
+    width: 3000px;
+    height: 3000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #4481EB, #04BEFE);
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    z-index: 6;
+    transition: 1.8s ease-in-out;
+}
+
+/*.formsContainer 
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}*/
+
+.signIn_signUp 
+{
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+    transition: 1s 0.7s ease-in-out;
+}
+
+form 
+{
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    transition: .2s .7s ease-in-out;
+}
+
+form.signInForm 
+{
+    z-index: 2;
+}
+
+form.signUpForm 
+{
+    z-index: 1;
+    opacity: 0;
+}
+.title 
+{
+    font-size: 2.2rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.inputField 
+{
+    max-width: 380px;
+    width: 100%;
+    height: 55px;
+    background-color: #E3E3E3;
+    margin: 10px 0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 .4rem;
+}
+
+.inputField i 
+{
+    text-align: center;
+    line-height: 55px;
+    color: #ACACAC;
+    font-size: 1.1rem;
+}
+
+.inputField input, select 
+{
+    outline: none;
+    background: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.inputField input, select::placeholder 
+{
+    color: #092B98;
+    font-weight: 700;
+}
+
+.btn 
+{
+    width: 160px;
+    height: 45px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #5995fd;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: .5s;
+}
+
+.btn:hover 
+{
+    background-color: #A8BDFF;
+}
+
+.panelsContainer
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.panel 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 7;
+}
+
+.leftPanel 
+{
+    pointer-events: all;
+    padding: 3rem 17% 2rem 12%;
+}
+
+.rightPanel 
+{
+    pointer-events: none;
+    padding: 3rem 12% 2rem 17%;
+}
+
+.panel .content
+{
+    color: #FFF;
+    transition: 0.9s 0.6s ease-in-out;
+}
+
+.panel h3 
+{
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.5rem;
+}
+
+.panel p 
+{
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+}
+
+.btn.transparent
+{
+    margin: 0;
+    background: none;
+    border: 2px solid #FFF;
+    width: 130px;
+    height: 41px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.rightPanel .content, .rightPanel .image 
+{
+    transform: translateX(800px);
+}
+
+.image
+{
+    width: 100%;
+    transition: 1.1s 0.4s ease-in-out;
+}
+
+/* JavaScript Animation Part so it looks fun f soutenance :D */
+.container.signUpMode::before
+{
+    transform: translate(100%, -50%);
+    right: 52%;
+}
+
+.container.signUpMode .leftPanel .image, 
+.container.signUpMode .leftPanel .content
+{
+    transform: translateX(-800px);
+}
+
+.container.signUpMode .rightPanel .content, 
+.container.signUpMode .rightPanel .image 
+{
+    transform: translateX(0px);
+}
+
+.container.signUpMode .leftPanel 
+{
+    pointer-events: none;
+}
+
+.container.signUpMode .rightPanel 
+{
+    pointer-events: all;
+}
+
+.container.signUpMode .signIn_signUp 
+{
+    left: 25%;
+}
+
+.container.signUpMode form.signInForm 
+{
+    z-index: 1;
+    opacity: 0;
+}
+
+.container.signUpMode form.signUpForm 
+{
+    z-index: 2;
+    opacity: 1;
+}
+
+@media (max-width: 870px) 
+{
+    .container
+    {
+        min-height: 800px;
+        height: 100vh;
+    }
+    .container::before
+    {
+        width: 1500px;
+        height: 15000px;
+        left: 30%;
+        bottom: 68%;
+        transform: translateX(-50%);
+        right: initial;
+        top: initial;
+    }
+    .signIn_signUp
+    {
+        width: 100%;
+        left: 50%;
+        top: 95%;
+        transform: translate(-50%, -100%);
+    }
+    .panelsContainer
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+    .panel
+    {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2.5rem 8%;
+    }
+    .panel .content
+    {
+        padding-right: 15%;
+    }
+    .image 
+    {
+        width: 200px;
+    }
+    .leftPanel
+    {
+        grid-row: 1 / 2;  
+    }
+    .rightPanel
+    {
+        grid-row: 3 / 4;
+    }
+    .rightPanel .content, .rightPanel .image 
+    {
+        transform: translateY(300px);
+    }
+  }

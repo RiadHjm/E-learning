@@ -1,0 +1,25 @@
+library("openintro")
+
+onetimeF = read.csv('C:/Users/riad2/Downloads/ontime_february.csv')
+onetimeJ = read.csv('C:/Users/riad2/Downloads/ontime_january.csv')
+
+Origin_Airport_ID = unique(onetimeF$ORIGIN_AIRPORT_ID)
+numberM1 = c()
+numberM2 = c()
+numberM3 = c()
+
+#Origin_Airport_ID <- replace(Origin_Airport_ID, is.na(Origin_Airport_ID), 0)
+Origin_Airport_ID[is.na(Origin_Airport_ID)] <- 0
+
+for(i in Origin_Airport_ID)
+{
+  Origin_Airport_ID_sub = subset(onetimeF, Origin_Airport_ID == i)
+  numberM1 = c(numberM1, nrow(Origin_Airport_ID_sub))
+  numberM2 = c(numberM2, mean(Origin_Airport_ID_sub$DEP_DELAY_NEW > 0))
+  numberM3 = c(numberM3, sd(Origin_Airport_ID_sub$DEP_DELAY_NEW))
+}
+
+A <- min(Origin_Airport_ID_sub$DEP_DELAY_NEW)
+
+
+//Didn't know how to do the rest of the questions.. 
